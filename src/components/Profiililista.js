@@ -10,7 +10,7 @@ class Profiililista extends Component {
             }) 
         return (
             <div>
-                <h3>Tehtävälista</h3>
+                <h3>Käyttäjän tiedot</h3>
                 {kayttajanTiedot}<br/>
                 
             </div>

@@ -5,7 +5,7 @@ class Tehtavalista extends Component {
     render() {
         var kaikkiTehtavat= this.props.tehtavat
             .map(function(task){
-                return (<Tehtava tehtava={task}/>)
+                return (<Tehtava tehtava={task} key = {task.id}/>)
             })
  
         return (
@@ -18,4 +18,5 @@ class Tehtavalista extends Component {
 }
 
 export default Tehtavalista;
+
 
