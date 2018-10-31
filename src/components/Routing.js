@@ -14,7 +14,7 @@ class Routing extends Component {
         return (
             <div>
                 <Switch>
-                    <Route exact path ="/" component={Home} />
+                    <Route exact path ="/" render = { props => <Home {...props} tehtavat ={this.props.kayttaja} />} />
                     <Route path ="/TehtavaForm" component={TehtavaForm} /> 
                     <Route path ="/profiili" render ={props => <Profiili {...props} profiili ={this.props.kayttaja}/>} />                    
                 </Switch>                

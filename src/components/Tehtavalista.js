@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import Tehtava from './Tehtava';
 
 class Tehtavalista extends Component {
+    
     render() {
-        var kaikkiTehtavat= this.props.tehtavat
+        console.log("Tehtävälista "+this.props.tehtavat.kayttaja.Tehtava);
+        var kaikkiTehtavat= this.props.tehtavat.kayttaja.Tehtava
             .map(function(task){
-                return (<Tehtava tehtava={task} key = {task.id}/>)
+                return (<Tehtava tehtava={task} key = {task.TehtavaID}/>)
             })
  
         return (

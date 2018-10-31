@@ -22,6 +22,7 @@ class App extends Component {
   }
   AsetaStateen = value =>{
     this.setState({kayttaja: value})
+    console.log(this.state);
   }
   
   
