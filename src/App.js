@@ -5,23 +5,38 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import {Jumbotron} from 'react-bootstrap';
 import React, { Component } from 'react';
 import './App.css';
-import TehtavaBox from "./components/TehtavaBox";
-import {BrowserRouter as Router} from 'react-router-dom';
+import Home from "./components/Home";
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Routing from "./components/Routing";
 import Navigation from "./components/Navigation";
+import {HaeKayttaja} from './serviceclient';
 
 class App extends Component {
+  constructor (props){
+    super (props);
+    this.state ={kayttaja:""}
+  }
+  
+  componentDidMount = () => {
+    HaeKayttaja(this.AsetaStateen );    
+  }
+  AsetaStateen = value =>{
+    this.setState({kayttaja: value})
+  }
+  
+  
   render() {
+
     return (
       //     Jumbotronia käytetty mallissa
       <Router>
-            <div className="App">
-                  <Routing/>
-                  <header className="App-header">
-                  <Navigation/>
-                  </header>
-                  <TehtavaBox/>
-            </div>
+        <div className="App">
+          
+          <header className="App-header">
+          <Navigation/>
+          <Routing kayttaja = {this.state}/>
+          </header>
+        </div>
       </Router>
     );
   }

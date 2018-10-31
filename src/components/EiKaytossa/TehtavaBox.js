@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Tehtavalista from "./Tehtavalista";
+import Tehtavalista from "../Tehtavalista";
 import Profiililista from "./Profiililista";
-import TehtavaForm from "./crud/TehtavaForm";
+import TehtavaForm from "../crud/TehtavaForm";
 
 
 var data= [{nimi:"Soita lääkäriin", kuvaus:"Varaa gynekologi"}]
-var data2= [{id: "1", etunimi:"Anna", sukunimi:"Malli"}]
+
 
 class TehtavaBox extends Component {
     constructor (props){
