@@ -14,7 +14,7 @@ import {HaeKayttaja} from './serviceclient';
 class App extends Component {
   constructor (props){
     super (props);
-    this.state ={kayttaja:""}
+    this.state ={kayttaja: {Tehtava: []}}
   }
   
   componentDidMount = () => {
@@ -22,7 +22,7 @@ class App extends Component {
   }
   AsetaStateen = value =>{
     this.setState({kayttaja: value})
-    console.log(this.state);
+    console.log("App:ssa state: "+this.state);
   }
   
   
