@@ -24,6 +24,8 @@ import { Nav,
         NavItem,
         NavDropdown,
         MenuItem} from "react-bootstrap";
+import  "./Navigation.css";
+
 class Navigation extends Component {
     handleSelect(eventKey, event) {
         event.preventDefault();
@@ -31,15 +33,16 @@ class Navigation extends Component {
     }
     render() {
         return (
+            <div className="row">
             <Nav bsStyle="tabs" activeKey="1" onSelect={k=>this.handleSelect(k)}>
-                <NavItem eventKey="1" href="/home">
-                NavItem 1 content
+                <NavItem className="navitem" eventKey="1" href="/home">
+                NavItem 1
                 </NavItem>
                 <NavItem eventKey="2" href="Item">
-                NavItem 2 content
+                NavItem 2
                 </NavItem>
                 <NavItem eventKey="3" disabled>
-                NavItem  disabled
+                NavItem dis
                 </NavItem>
             <NavDropdown eventKey="4" title="Dropdown" id="nav-dropdown">
                 <MenuItem eventKey="4.1">Action</MenuItem>
@@ -49,6 +52,7 @@ class Navigation extends Component {
                 <MenuItem eventKey="4.4">Separated link</MenuItem>
         </NavDropdown>
       </Nav>
+      </div>
     );
   }
 }

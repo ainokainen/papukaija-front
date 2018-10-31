@@ -14,9 +14,9 @@ class App extends Component {
       // <Jumbotron>
       <div className="App">
         <header className="App-header">
-        <Navigation/>
-          <TehtavaBox/>
+          <Navigation/>
         </header>
+          <TehtavaBox/>
       </div>
       // </Jumbotron>
     );
