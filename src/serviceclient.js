@@ -1,23 +1,27 @@
 import axios from 'axios';
 
-// var apiBaseUrl = 'http://localhost:52307/api/';
+var apiBaseUrl = 'http://localhost:52307/api/';
 
-// export function HaeKayttaja (data){
-//    console.log('HaeKayttaja')
-//    console.dir(data);
-//    var uname = data.Email;
-//    var pass = data.Salasana;
-//    console.log(data);
-//    axios.post(apiBaseUrl+'login',  {
-//        Email: uname,
-//        Salasana: pass
-//    }
-//    ).then(function(response) {
-//        console.log('Authenticated');
-//    }).catch(function(error) {
-//  console.log('Error on Authentication' +error);
-// });
-// }
+export function LoginController (data){
+    console.log('HaeKayttaja')
+    console.dir(data);
+    var uname = data.Email;
+    var pass = data.Salasana;
+    
+    console.log(data);
+    axios.post(apiBaseUrl+'login',  {
+        Email: uname,
+        Salasana: pass
+    }
+    ).then(function(response) {
+        console.log('Authenticated');
+        data.isLogin = true;
+        data.ID = response.data.ID;
+        console.log(data)
+    }).catch(function(error) {
+  console.log('Error on Authentication' +error);
+});
+}
 
 export function HaeKayttaja (callback){
    console.log('axios')
@@ -79,4 +83,4 @@ export function MuokkaaTehtavaa (item, callback){
     .then(callback);
 }
 
-export default {HaeKayttaja};
+export default {HaeKayttaja , LoginController};

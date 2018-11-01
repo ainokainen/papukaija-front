@@ -5,6 +5,7 @@ import './App.css';
 import {BrowserRouter as Router} from 'react-router-dom';
 import Routing from "./components/Routing";
 import Navigation from "./components/Navigation";
+import Login from './components/Login';
 
 
 class App extends Component {
@@ -15,14 +16,11 @@ class App extends Component {
       <Router>
         <div className="App">
           
-          <header className="App-header">
-          <Navigation/>
-          <Routing />
-          </header>
-          <div>
-          <Routing kayttaja = {this.state}/>
+         
+            <Login/>
+          
           </div>
-        </div>
+        
       </Router>
     );
   }
