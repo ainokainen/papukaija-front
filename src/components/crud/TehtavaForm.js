@@ -1,15 +1,32 @@
 import React, { Component } from 'react';
 
+
 class TehtavaForm extends Component {
     constructor (props){
         super (props)
         
-        this.state= {Nimi:" ", Kuvaus:" ", Pisteet: "  ", Kuva: "  ", Kategoria: "  ", Julkinen: " ", Tehty: " "}
+        this.state= {Nimi:" ", Kuvaus:" ", Pisteet: "  ", KayttajaID:2, Kuva: null,  Aikaleima: this.DateHandler(), Kategoria: "  ", Julkinen: 0, Tehty:0}
     }
+
+        DateHandler(){
+            var tanaan = new Date();
+            var mm = tanaan.getMonth();
+            var dd = tanaan.getDate();
+            var yyyy = tanaan.getFullYear();
+            if(dd < 10){
+                dd= '0'+dd;
+            }
+            if(mm < 10){
+                mm = '0'+mm
+            }
+            tanaan = yyyy+'-'+mm+'-'+dd;
+            this.setState({aikaleima: tanaan})
+        };
        luoT=(event)=>{
            event.preventDefault();
-           console.dir(this.state);
-           this.props.luoTehtava(this.state);
+           console.log("Seuraavaksi terveisiä tformilta")
+           console.log(this.state);
+           this.props.tehtavaHandler(this.state);
        }
        nimiChange = (e) => {
            this.setState({Nimi: e.target.value});
@@ -19,7 +36,7 @@ class TehtavaForm extends Component {
        }
 
        pisteetChange = (e) => {
-           this.setState({Pisteet: e.target.value});
+           this.setState({Pisteet: parseInt(e.target.value)});
        }
 
        kuvaChange = (e) => {
@@ -28,15 +45,6 @@ class TehtavaForm extends Component {
 
        kategoriaChange = (e) => {
            this.setState({Kategoria: e.target.value});
-       }
-
-       julkinenChange = (e) => {
-           this.setState({Julkinen: e.target.value});
-           
-       }
-
-       tehty = (e) => {
-           this.setState({Tehty: e.target.value});
        }
 
   
@@ -48,7 +56,6 @@ class TehtavaForm extends Component {
                    Nimi: <input type="text" onChange={this.nimiChange} value ={this.state.Nimi}/> <br/>
                    Kuvaus: <input type="text" onChange = {this.kuvausChange} value = {this.state.Kuvaus} /> <br/>
                    Pisteet: <input type="number" onChange = {this.pisteetChange} value = {this.state.Pisteet} /> <br/>
-                   Julkinen: <input type= "checkbox" onChange = {this.julkinenChange} value = {this.state.Julkinen}/> <br/> 
                    
                    <input type="button" value = "lisää" onClick ={this.luoT} />
                </div>

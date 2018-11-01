@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Tehtavalista from './Tehtavalista';
+import TehtavaForm from './crud/TehtavaForm';
 
 class Home extends Component {
     constructor (props){
@@ -15,7 +16,9 @@ class Home extends Component {
         return (
             <div>
                 <p>Home</p>
-                { <Tehtavalista tehtavat={this.props.tehtavat.kayttaja.Tehtava}/> }
+                 <Tehtavalista tehtavat={this.props.tehtavat.kayttaja.Tehtava}/> 
+                 <TehtavaForm tehtavaHandler= {this.props.tehtavaHandler}/>
+                
             </div>
         );
     }
