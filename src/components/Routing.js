@@ -37,13 +37,19 @@ class Routing extends Component {
       MuokkaaTehtavaa(task, this.KayttajanHaku);
     }
     
+    
     render() {
+        
+        this.tehdyt = this.state.kayttaja.Tehtava.filter(tehtava => tehtava.Tehty == true);
+        this.eiTehdyt = this.state.kayttaja.Tehtava.filter(tehtava => tehtava.Tehty == false);
+
         return (
             <div>
                 <Switch>
-                    <Route exact path ="/" render = { props => <Home {...props} tehtavat ={this.state} tehtavaHandler={this.UusiTehtavaHandler} />} />
+                    <Route exact path ="/" render = { props => <Home {...props} eiTehdytTehtavat ={this.eiTehdyt} tehtavaHandler={this.UusiTehtavaHandler} />} />
                     <Route path ="/profiili" render ={props => <Profiili {...props} profiili ={this.state}/>} />    
-                    <Route path ="/done" render ={props => <Done {...props} profiili ={this.state}/>} />  
+                    <Route path ="/done" render ={props => <Done {...props} tehdytTehtavat ={this.tehdyt}/>} />  
+                    
                 </Switch>                
             </div>
         );

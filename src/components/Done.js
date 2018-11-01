@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import Tehtavalista from './Tehtavalista';
 
 class Done extends Component {
     render() {
         return (
             <div>
-                Tää on tehty
+
+                <Tehtavalista tehtavat={this.props.tehdytTehtavat}/> 
             </div>
         );
     }

@@ -38,7 +38,6 @@ class Tehtavalista extends Component {
                     
                 </div> */}
                 {kaikkiTehtavat}
-                <h3>Tehtävälista</h3>
                 <br />
             </div>
         );
