@@ -1,4 +1,30 @@
-.navitem{
+.headerElements {
+    background-color: #FFFFFC;
     padding: 2em;
-    columns: 4;
+}
+.navItems {
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    background-color: #EBF38B;
+    height: 15vmin;
+    width: 15vmin;
+    text-align: center;
+    padding-top: 6vmin;
+    margin-right: 2em;
+    color: #808782;
+    
+}
+.navItems:hover {
+    color: #808782;
+}
+.panel{
+    background-color: white;
+    text-align: left;
+    border-style: solid;
+    border-color: #666A86;
+    border-width: thin;
+}
+.paneeliHeading{
+    background-color:#EBF38B;
+    color:#666A86;
 }
