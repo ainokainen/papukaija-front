@@ -24,33 +24,12 @@ class Navigation extends Component {
 
                 Kayttajan tiedot<br/><br/>
                 </NavItem>
-                <NavItem eventKey="3" disabled>
-                
+                <NavItem className="navItems" e eventKey="3" href="/done">
+                <br/>Tehdyt<br/><br/><br/>
                 </NavItem>
-                
-            <NavDropdown className="navItems" eventKey="4" title="Profiili" id="nav-dropdown">
-                <br/><br/>
-                <MenuItem eventKey="4.1">Action</MenuItem>
-                <MenuItem eventKey="4.2">Another action</MenuItem>
-                <MenuItem eventKey="4.3">Something else here</MenuItem>
-                <MenuItem divider />
-                <MenuItem eventKey="4.4">Separated link</MenuItem>
-            </NavDropdown>
-        </Nav>
-        </div>
-        <div className="panelwidth">
-        <Panel id="omapanel" collapsible defaultExpanded>
-            <Panel.Heading className="">
-            <Panel.Title toggle>Tekemätön tehtävä otsikko </Panel.Title>
-            <input type="button"/>
-            </Panel.Heading>
-           <Panel.Collapse>
-                <Panel.Body>
-                Tänne tehtävän tehtävän kuvaus ja informaatiota ja olisko meillä jotain muuta sälää tänne?
-                </Panel.Body>
-            </Panel.Collapse>
-        </Panel>
-        
+            </Nav>
+            </div>
+        {/* <div className="panelwidth">
         <div>
         <Media>
         <Media.Left align="bottom">
@@ -67,7 +46,7 @@ class Navigation extends Component {
     </Media.Body>
   </Media>
   </div>
-        </div>
+        </div> */}
         </div>
         );
     }
