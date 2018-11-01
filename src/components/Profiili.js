@@ -6,12 +6,12 @@ class Profiili extends Component {
         return (
             
             <div>
-                {this.props.profiili.kayttaja.Etunimi}<br/>
-                {this.props.profiili.kayttaja.Sukunimi}<br/>
-                {this.props.profiili.kayttaja.Email}<br/>
-                {this.props.profiili.kayttaja.Kuvaus}<br/>
-                {this.props.profiili.kayttaja.Kuva}<br/>
-                {this.props.profiili.kayttaja.Viikkotavoite}<br/>
+                {this.props.profiili.Etunimi}<br/>
+                {this.props.profiili.Sukunimi}<br/>
+                {this.props.profiili.Email}<br/>
+                {this.props.profiili.Kuvaus}<br/>
+                {this.props.profiili.Kuva}<br/>
+                {this.props.profiili.Viikkotavoite}<br/>
 
                 
             </div>

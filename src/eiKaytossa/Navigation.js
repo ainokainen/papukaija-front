@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import "../App.css"
 import { Media,Nav,NavItem,NavDropdown,MenuItem, Panel} from "react-bootstrap";
-import  "./Navigation.css";
-import Home from './Home';
+
+import Home from '../components/Home';
 
 class Navigation extends Component {
     //Navigaation "eventit"
@@ -16,7 +16,7 @@ class Navigation extends Component {
             <div>
             <div className="navi">
             <Nav bsStyle="pills" onSelect={k=>this.handleSelect(k)}>
-                <NavItem className="navItems" eventKey="1" href="/">
+                <NavItem className="navItems" eventKey="1" href="/home">
                     <br/>Home<br/><br/><br/>
                 </NavItem>
                 <NavItem className="navItems" eventKey="2" href="/Profiili">

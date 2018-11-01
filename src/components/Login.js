@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import {LoginController} from '../serviceclient';
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import {BrowserRouter as Router, Route, Redirect} from 'react-router-dom';
 import "../styles/Login.css";
 import Home from './Home';
 import Rekisteroi from './Rekisteroi';
+import Routing from './Routing';
  
 
 class Login extends Component {
@@ -14,8 +16,7 @@ class Login extends Component {
 
     validateForm() {
         return this.state.Email.length > 0 && this.state.Salasana.length > 0;
-      }
-    
+    }
 
     handleUsername(e){
         this.setState({Email: e})
@@ -27,27 +28,25 @@ class Login extends Component {
 
     loginHandler=(e)=>{
         e.preventDefault();
-        LoginController(this.state);
+        // Huom! tässä palautuu callbackin mukana koko käyttäjä, eli siis jatkossa routingissa kannasta ei lähdetä hakemaan enää uudestaan, vaan käytetään saatua tyyppiä
+        LoginController(this.state, this.props.onnistuikoLogin);
+        
     }
 
     validatePW(){
-        if(this.state.isLogin === false){
-            return <p>Väärä salasana</p>
-        }
     }
+
+   
 
     redirecRegister(){
         
     }
 
-
-
-
     render() {
-              
+           
         return (
             <div className="Login">
-            <img className="image" alt="Parrot" src="https://trello-attachments.s3.amazonaws.com/5bd715c372be28202555c3ef/5bd80baf68c39a065a05d18e/48d0d4b6ec99a43c253904be163acd8d/Silver.png" responsive/>
+            <img className="image" alt="Parrot" src="https://trello-attachments.s3.amazonaws.com/5bd715c372be28202555c3ef/5bd80baf68c39a065a05d18e/48d0d4b6ec99a43c253904be163acd8d/Silver.png" />
             <form onSubmit={this.loginHandler}>
               <FormGroup controlId="email" bsSize="large">
                 <ControlLabel>Email</ControlLabel>
@@ -66,6 +65,7 @@ class Login extends Component {
                   type="password"
                 />
               </FormGroup>
+              {this.onkoKirjautunut}
               <Button
                 block
                 bsSize="large"
@@ -77,7 +77,7 @@ class Login extends Component {
 
               
             </form>
-            <br/>
+            {/* <br/>
             <form onSubmit={this.redirecRegister}>
             <Button
                 block
@@ -87,7 +87,7 @@ class Login extends Component {
                 Rekisteröidy
               </Button>
             
-            </form>
+            </form> */}
 
           </div>
         );

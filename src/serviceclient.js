@@ -2,7 +2,7 @@ import axios from 'axios';
 
 var apiBaseUrl = 'http://localhost:52307/api/';
 
-export function LoginController (data){
+export function LoginController (data, callback){
     console.log('HaeKayttaja')
     console.dir(data);
     var uname = data.Email;
@@ -14,19 +14,20 @@ export function LoginController (data){
         Salasana: pass
     }
     ).then(function(response) {
-        console.log('Authenticated');
-        data.isLogin = true;
-        data.ID = response.data.ID;
-        console.log(data)
+        // console.log('Authenticated');
+        // data.isLogin = true;
+        // data.ID = response.data.ID;
+        callback(response.data)
+        // console.log(data)
     }).catch(function(error) {
   console.log('Error on Authentication' +error);
 });
 }
 
-export function HaeKayttaja (callback){
+export function HaeKayttaja (id, callback){
    console.log('axios')
    //Huomioi! DummyID!
-   axios.get('http://localhost:52307/api/kayttajat/2')
+   axios.get('http://localhost:52307/api/kayttajat/'+id)
    .then(function(response){
        callback(response.data);
    });
