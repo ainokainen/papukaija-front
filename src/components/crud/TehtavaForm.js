@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import '../Form.css';
+import { Form, ControlLabel } from "react-bootstrap";
 
 
 class TehtavaForm extends Component {
@@ -52,12 +54,14 @@ class TehtavaForm extends Component {
        render() {
            return (
                <div>
-                   <h3>Lisää uusi tehtävä</h3>
+               <Form horizontal>
+                   <ControlLabel>Lisää uusi tehtävä</ControlLabel><br/>
                    Nimi: <input type="text" onChange={this.nimiChange} value ={this.state.Nimi}/> <br/>
                    Kuvaus: <input type="text" onChange = {this.kuvausChange} value = {this.state.Kuvaus} /> <br/>
                    Pisteet: <input type="number" onChange = {this.pisteetChange} value = {this.state.Pisteet} /> <br/>
                    
                    <input type="button" value = "lisää" onClick ={this.luoT} />
+               </Form>
                </div>
            );
        }

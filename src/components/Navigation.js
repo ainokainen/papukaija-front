@@ -52,7 +52,7 @@ class Navigation extends Component {
             </Panel.Collapse>
         </Panel>
         </div>
-        {/* <div className="panelwidth">
+         <div className="panelwidth">
         <div>
         <Media>
         <Media.Left align="bottom">
@@ -69,7 +69,7 @@ class Navigation extends Component {
     </Media.Body>
   </Media>
   </div>
-        </div> */}
+        </div> 
         </div>
         );
     }
