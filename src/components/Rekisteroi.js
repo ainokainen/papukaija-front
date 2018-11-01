@@ -8,9 +8,33 @@ class Rekisteroi extends Component {
         super(props);
             this.state = {Etunimi:'', Sukunimi:'', Email:'',Salsana:'', Viikkotavoite:'' }
     }
-    
-    registerHandler=(e)=>{
 
+    handleEtunumi(e){
+        this.setState({Etunimi: e})
+    }
+
+    handleSukunimi(e){
+        this.setState({Sukunimi: e})
+    }
+
+    handleUsername(e){
+        this.setState({Email: e})
+    }
+
+    handlePassword(e){
+        this.setState({Salasana: e})
+    }
+
+    handleViikkotavoite(e){
+        this.setState({Viikkotavoite: e})
+    }
+
+
+
+
+    registerHandler=(e)=>{
+        e.preventDefault();
+        LisaaKayttaja(this.state);
     }
 
 
