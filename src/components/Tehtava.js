@@ -4,15 +4,14 @@ class Tehtava extends Component {
     render() {
         return (
             <div>
-                {this.props.tehtava.Nimi}<br/>
-                {this.props.tehtava.Kuvaus}<br/>
-                {/* {this.props.tehtava.TehtavaID} <br/> */}
-{/*                 {this.props.tehtava.pisteet}<br/>
+               Tehtävän nimi:<br/> {this.props.tehtava.Nimi}<br/>
+                Kuvaus: <br/> {this.props.tehtava.Kuvaus}<br/><br/>
+                {/* {this.props.tehtava.pisteet}<br/>
                 {this.props.tehtava.kuva}<br/>
                 {this.props.tehtava.aikaleima}<br/>
                 {this.props.tehtava.kategoria}<br/>
-                {this.props.tehtava.julkinen}<br/>
                 {this.props.tehtava.tehty}<br/> */}
+                <input type = "button" value = "Muokkaa" onClick= "" /> 
 
             </div>
         );
