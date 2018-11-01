@@ -6,7 +6,6 @@ class Profiili extends Component {
     render() {
        
         return (
-            
             <div className = 'panelwidth'>
 
                 <Panel id="omapanel">
