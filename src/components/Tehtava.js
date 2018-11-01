@@ -6,6 +6,7 @@ class Tehtava extends Component {
             <div>
                Tehtävän nimi:<br/> {this.props.tehtava.Nimi}<br/>
                 Kuvaus: <br/> {this.props.tehtava.Kuvaus}<br/><br/>
+                Tehty: {(this.props.tehtava.Tehty).toString()}<br/>
                 {/* {this.props.tehtava.pisteet}<br/>
                 {this.props.tehtava.kuva}<br/>
                 {this.props.tehtava.aikaleima}<br/>

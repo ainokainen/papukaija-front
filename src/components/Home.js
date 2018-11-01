@@ -6,17 +6,15 @@ import TehtavaForm from './crud/TehtavaForm';
 class Home extends Component {
     constructor (props){
         super (props);
-        this.lista = this.props.tehtavat.kayttaja.Tehtava;
+        // this.lista = this.props.tehtavat.kayttaja.Tehtava;
         // this.parsittuTehtavaLista =JSON.parse(this.lista);
 
     }
     render() {
-        console.log(this.lista);
-        console.log(this.props.tehtavat.kayttaja.Tehtava);
         
         return (
             <div>
-                 <Tehtavalista tehtavat={this.props.tehtavat.kayttaja.Tehtava}/> 
+                 <Tehtavalista tehtavat={this.props.eiTehdytTehtavat}/> 
                  <TehtavaForm tehtavaHandler= {this.props.tehtavaHandler}/>
                 
             </div>
