@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Profiili from "./Profiili";
+import Profiili from "../Profiili";
 
 class Profiililista extends Component {
     render() {
