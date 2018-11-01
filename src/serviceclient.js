@@ -22,7 +22,7 @@ import axios from 'axios';
 export function HaeKayttaja (callback){
    console.log('axios')
    //Huomioi! DummyID!
-   axios.get('http://localhost:52307/api/kayttajat/2')
+   axios.get('http://localhost:52307/api/kayttajat/5')
    .then(function(response){
        callback(response.data);
    });

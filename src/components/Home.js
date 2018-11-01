@@ -16,7 +16,6 @@ class Home extends Component {
         
         return (
             <div>
-                <p>Home</p>
                  <Tehtavalista tehtavat={this.props.tehtavat.kayttaja.Tehtava}/> 
                  <TehtavaForm tehtavaHandler= {this.props.tehtavaHandler}/>
                 

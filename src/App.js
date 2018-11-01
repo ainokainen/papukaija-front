@@ -16,7 +16,6 @@ class App extends Component {
           
           <header className="App-header">
           <Navigation/>
-          <Routing />
           </header>
           <div>
           <Routing kayttaja = {this.state}/>

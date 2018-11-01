@@ -4,6 +4,7 @@ import TehtavaForm from "./crud/TehtavaForm"
 import Home from "./Home";
 import Profiili from './Profiili';
 import {HaeKayttaja, LisaaTehtava, MuokkaaTehtavaa} from '../serviceclient';
+import Done from './Done';
 
 class Routing extends Component {
     constructor (props){
@@ -41,7 +42,8 @@ class Routing extends Component {
             <div>
                 <Switch>
                     <Route exact path ="/" render = { props => <Home {...props} tehtavat ={this.state} tehtavaHandler={this.UusiTehtavaHandler} />} />
-                    <Route path ="/profiili" render ={props => <Profiili {...props} profiili ={this.state}/>} />                    
+                    <Route path ="/profiili" render ={props => <Profiili {...props} profiili ={this.state}/>} />    
+                    <Route path ="/done" render ={props => <Done {...props} profiili ={this.state}/>} />  
                 </Switch>                
             </div>
         );

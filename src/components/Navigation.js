@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "../App.css"
-import {Image, Media,Nav,NavItem,NavDropdown,MenuItem, Panel} from "react-bootstrap";
+import { Media,Nav,NavItem,NavDropdown,MenuItem, Panel} from "react-bootstrap";
 import  "./Navigation.css";
 import Home from './Home';
 
@@ -24,8 +24,8 @@ class Navigation extends Component {
 
                 Kayttajan tiedot<br/><br/>
                 </NavItem>
-                <NavItem eventKey="3" disabled>
-                
+                <NavItem className="navItems" e eventKey="3" href="/done">
+                <br/>Tehdyt<br/><br/><br/>
                 </NavItem>
                 
             <NavDropdown className="navItems" eventKey="4" title="Profiili" id="nav-dropdown">
@@ -51,7 +51,8 @@ class Navigation extends Component {
                 </Panel.Body>
             </Panel.Collapse>
         </Panel>
-        
+        </div>
+        {/* <div className="panelwidth">
         <div>
         <Media>
         <Media.Left align="bottom">
@@ -68,7 +69,7 @@ class Navigation extends Component {
     </Media.Body>
   </Media>
   </div>
-        </div>
+        </div> */}
         </div>
         );
     }
