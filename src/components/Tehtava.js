@@ -3,9 +3,11 @@ import React, { Component } from 'react';
 class Tehtava extends Component {
     render() {
         return (
-            <div>
-               Tehtävän nimi:<br/> {this.props.tehtava.Nimi}<br/>
-                Kuvaus: <br/> {this.props.tehtava.Kuvaus}<br/><br/>
+            <div>                
+               <h5>Tehtävä:</h5>
+               {this.props.tehtava.Nimi}<br/><br/>
+               <h5>Kuvaus: </h5>
+               {this.props.tehtava.Kuvaus}<br/>
                 {/* Tehty: {(this.props.tehtava.Tehty).toString()}<br/> */}
                 {/* {this.props.tehtava.pisteet}<br/>
                 {this.props.tehtava.kuva}<br/>
