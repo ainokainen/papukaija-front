@@ -51,9 +51,9 @@ export function LisaaKayttaja (item){
    });
 }
 
-export function LisaaTehtava (item, callback){
+export function LisaaTehtava (task, callback){
    console.log("axios lisää tehtävä")
-   axios.post('http://localhost:52307/api/Tehtavat', item)
+   axios.post('http://localhost:52307/api/Tehtavat/', task)
    .then(function (response){
       if (response.status === 201) {
            console.log("Tehtävä luotu");

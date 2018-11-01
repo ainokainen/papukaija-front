@@ -13,15 +13,15 @@ class Profiili extends Component {
                        <Panel.Title > Käyttäjäprofiili </Panel.Title>
                         </Panel.Heading>
                             <Panel.Body> 
-                            <h5> Nimi: </h5> {this.props.profiili.kayttaja.Etunimi} {this.props.profiili.kayttaja.Sukunimi}
+                            <h5> Nimi: </h5> {this.props.profiili.Etunimi} {this.props.profiili.Sukunimi}
                             </Panel.Body>
                             <Panel.Body>
-                            <h5>Sähköpostiosoite: </h5>{this.props.profiili.kayttaja.Email}<br/>
+                            <h5>Sähköpostiosoite: </h5>{this.props.profiili.Email}<br/>
                             </Panel.Body>
                             <Panel.Body>
-                            <h5>Kuvausteksti: </h5>{this.props.profiili.kayttaja.Kuvaus}<br/>  
+                            <h5>Kuvausteksti: </h5>{this.props.profiili.Kuvaus}<br/>  
                             </Panel.Body>
-                            {this.props.profiili.kayttaja.Kuva}<br/>
+                            {this.props.profiili.Kuva}<br/>
 
                     </Panel>
                 
