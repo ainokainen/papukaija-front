@@ -30,8 +30,10 @@ class App extends Component {
           
           <header className="App-header">
           <Navigation/>
-          <Routing kayttaja = {this.state}/>
           </header>
+          <div>
+          <Routing kayttaja = {this.state}/>
+          </div>
         </div>
       </Router>
     );

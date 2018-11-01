@@ -1,6 +1,10 @@
 .headerElements {
     background-color: #FFFFFC;
-    padding: 2em;
+}
+.navi {
+    flex: 100%;
+    align-items: stretch;
+    margin: 2em;
 }
 .navItems {
     -webkit-clip-path: circle(50% at 50% 50%);
@@ -8,15 +12,24 @@
     background-color: #EBF38B;
     height: 15vmin;
     width: 15vmin;
+    color: #808782;
+    margin: 2em; 
+}
+.navItems:hover  {
+    color: #808782;
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    color: #808782;
+    background-color:#EBF38B;
+    padding:15vmin;
+    padding-top: 15vmin; 
     text-align: center;
-    padding-top: 6vmin;
-    margin-right: 2em;
-    color: #808782;
-    
-}
-.navItems:hover {
-    color: #808782;
-}
+    }
+    .nav-pills> li.active > a:hover {
+        background-color: #EBF38B;
+        color: #808782;
+    }
+
 .panel{
     background-color: white;
     text-align: left;
@@ -27,4 +40,12 @@
 .paneeliHeading{
     background-color:#EBF38B;
     color:#666A86;
+}
+.panelwidth{
+    width:70vw;
+    max-width: 70vw;
+}
+.image {
+    width:10em;
+    height:10em;
 }
