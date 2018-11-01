@@ -40,9 +40,10 @@ class Navigation extends Component {
         </div>
         <div className="panelwidth">
         <Panel id="omapanel" collapsible defaultExpanded>
-            <Panel.Heading className="">
+            <Panel.Heading className="paneeliheading">
+            <input className="bDone" type="button" value="Done!"/>
+            <input className="bPoista" type="button" value="Poista!"/>
             <Panel.Title toggle>Tekemätön tehtävä otsikko </Panel.Title>
-            <input type="button"/>
             </Panel.Heading>
            <Panel.Collapse>
                 <Panel.Body>

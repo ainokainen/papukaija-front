@@ -9,7 +9,7 @@
 .navItems {
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    background-color: #EBF38B;
+    background-color: #D4AF37;
     height: 15vmin;
     width: 15vmin;
     color: #808782;
@@ -20,13 +20,13 @@
 }
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
     color: #808782;
-    background-color:#EBF38B;
+    background-color:#D4AF37;
     padding:15vmin;
     padding-top: 15vmin; 
     text-align: center;
     }
     .nav-pills> li.active > a:hover {
-        background-color: #EBF38B;
+        background-color:#D4AF37;
         color: #808782;
     }
 
@@ -37,9 +37,10 @@
     border-color: #666A86;
     border-width: thin;
 }
-.paneeliHeading{
+.panel-default>.panel-heading {
     background-color:#EBF38B;
     color:#666A86;
+    text-align: center;
 }
 .panelwidth{
     width:70vw;
@@ -48,4 +49,24 @@
 .image {
     width:10em;
     height:10em;
+}
+.bDone{
+    float: left;
+    color: #D4AF37;
+    background-color: white;
+    border-style: none;
+    border-radius: 5%;
+    padding: 0.25em;
+    padding-right: 0.5em;
+    padding-left:0.5em;
+}
+.bPoista {
+    float: right;
+    color: #D4AF37;
+    background-color: white;
+    border-style: none;
+    border-radius: 5%;
+    padding: 0.25em;
+    padding-right: 0.5em;
+    padding-left:0.5em;
 }
