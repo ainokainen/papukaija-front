@@ -14,6 +14,8 @@
     width: 15vmin;
     color: #808782;
     margin: 2em; 
+    font-size: 1.5em;
+    text-align: center;
 }
 .navItems:hover  {
     color: #808782;
@@ -23,7 +25,8 @@
     background-color:#D4AF37;
     padding:15vmin;
     padding-top: 15vmin; 
-    text-align: center;
+    
+    
     }
     .nav-pills> li.active > a:hover {
         background-color:#D4AF37;
@@ -50,6 +53,7 @@
 .image {
     width:10em;
     height:10em;
+    margin-top: 40px;
 }
 .bDone{
     float: left;
@@ -71,3 +75,8 @@
     padding-right: 0.5em;
     padding-left:0.5em;
 }
+div.navi{
+    margin-left: 15%;
+    align-items: center;
+}
+

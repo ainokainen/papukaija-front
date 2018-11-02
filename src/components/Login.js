@@ -46,7 +46,7 @@ class Login extends Component {
            
         return (
             <div className="Login">
-            <img className="image" alt="Parrot" src="https://trello-attachments.s3.amazonaws.com/5bd715c372be28202555c3ef/5bd80baf68c39a065a05d18e/48d0d4b6ec99a43c253904be163acd8d/Silver.png" />
+            <img className="imageLogin" alt="Parrot" src="https://trello-attachments.s3.amazonaws.com/5bd715c372be28202555c3ef/5bd80baf68c39a065a05d18e/48d0d4b6ec99a43c253904be163acd8d/Silver.png" />
             <form onSubmit={this.loginHandler}>
               <FormGroup controlId="email" bsSize="large">
                 <ControlLabel>Email</ControlLabel>

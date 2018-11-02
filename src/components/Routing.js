@@ -53,26 +53,26 @@ class Routing extends Component {
                     <Nav bsStyle="pills">
                         <li role="presentation" className="navItems">
                             <NavLink to="/" >
-                                Koti
+                                <br/>Koti<br/><br/><br/>
                             </NavLink>
                         </li>
                         <li role="presentation" className="navItems">
                             <NavLink to="/Profiili" >
-                                Kayttajan tiedot
+                            <br/>   Kayttajan tiedot<br/><br/><br/>
                             </NavLink>
                         </li>
                         <li role="presentation" className="navItems">
                             <NavLink to="/done" >
-                                Tehdyt
+                            <br/>    Tehdyt<br/><br/><br/>
                              </NavLink>
                         </li>
-                        <NavItem>
+                        <li>
                             <Media>
-                                <Media.Left align="bottom">
+                                <Media.Left>
                                     <img className="image" src="https://trello-attachments.s3.amazonaws.com/5bd715c372be28202555c3ef/5bd80baf68c39a065a05d18e/b2966e72bd3b5aeb14570f8a36b8e044/Gold.png" alt="parrot" />
                                 </Media.Left>
                             </Media>
-                        </NavItem>
+                        </li>
                     </Nav>
                 </div>
                 <Switch>

@@ -8,3 +8,11 @@
       max-width: 320px;
     }
   }
+
+  .imageLogin{
+    width: 13em;
+    height: 13em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
