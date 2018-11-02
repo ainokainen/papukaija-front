@@ -9,7 +9,7 @@ class Home extends Component {
         return (
             <div>
                  <Tehtavalista tehtavat={this.props.eiTehdytTehtavat}/> 
-                 <TehtavaForm tehtavaHandler= {this.props.tehtavaHandler}/>
+                 <TehtavaForm tehtavaHandler= {this.props.tehtavaHandler} kayttajaID={this.props.kayttajaID}/>
             </div>
         );
     }

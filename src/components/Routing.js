@@ -73,7 +73,7 @@ class Routing extends Component {
                     </Nav>
                 </div>
                 <Switch>
-                    <Route exact path="/" render={props => <Home {...props} eiTehdytTehtavat={this.eiTehdyt} tehtavaHandler={this.UusiTehtavaHandler} />} />
+                    <Route exact path="/" render={props => <Home {...props} kayttajaID={this.props.user.ID} eiTehdytTehtavat={this.eiTehdyt} tehtavaHandler={this.UusiTehtavaHandler} />} />
                     <Route path="/profiili" render={props => <Profiili {...props} profiili={this.props.user} />} />
                     <Route path="/done" render={props => <Done {...props} tehdytTehtavat={this.tehdyt} />} />
 

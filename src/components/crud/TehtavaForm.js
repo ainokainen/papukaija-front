@@ -7,7 +7,7 @@ class TehtavaForm extends Component {
     constructor (props){
         super (props)
         
-        this.state= {Nimi:" ", Kuvaus:" ", Pisteet: "  ", KayttajaID:2, Kuva: null,  Aikaleima: this.DateHandler(), Kategoria: "  ", Julkinen: 0, Tehty:0}
+        this.state= {Nimi:" ", Kuvaus:" ", Pisteet: "  ", KayttajaID:this.props.kayttajaID, Kuva: null,  Aikaleima: this.DateHandler(), Kategoria: "  ", Julkinen: 0, Tehty:0}
     }
 
         DateHandler(){
