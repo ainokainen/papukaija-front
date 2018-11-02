@@ -84,4 +84,20 @@ export function MuokkaaTehtavaa (item, callback){
     .then(callback);
 }
 
+export function PoistaTehtava (id, callback){
+    axios.delete('http://localhost:52307/api/Tehtavat/'+id)
+    .then(function (response){
+        if (response.status === 201) {
+            console.log("Tehtävä poistettu");
+        }
+        else {
+            console.log("Something went wrong" +response.status);
+        }
+    })
+    .catch(function (error) {
+        console.log(error);
+    })
+    .then(callback);
+}
+
 export default {HaeKayttaja , LoginController};

@@ -8,7 +8,7 @@ class Home extends Component {
         
         return (
             <div>
-                 <Tehtavalista tehtavat={this.props.eiTehdytTehtavat}/> 
+                 <Tehtavalista tehtavat={this.props.eiTehdytTehtavat} poistaTehtava ={this.props.poistaTehtava}/> 
                  <TehtavaForm tehtavaHandler= {this.props.tehtavaHandler} kayttajaID={this.props.kayttajaID}/>
             </div>
         );

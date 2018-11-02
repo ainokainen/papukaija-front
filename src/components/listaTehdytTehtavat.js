@@ -1,27 +1,19 @@
 import React, { Component } from 'react';
 import Tehtava from './Tehtava';
 import { Panel} from "react-bootstrap";
-import '../styles/Tehtavat.css'
-import '../App.css'
 
-class Tehtavalista extends Component {
+class TehdytTehtavat extends Component {
     
 
     render() {
-        this.PoistajaHandler =(event) =>{
-            var id = event.target.attributes.getNamedItem('data-id').value;
-            this.props.poistaTehtava(id);
-        }
-
-        var lista = this.props.tehtavat;
+       var lista = this.props.tehtavat;
         console.dir(lista);
         var kaikkiTehtavat = lista.map(
             tehtava => (
                     <div className="panelwidth">
-                        <Panel collapsible defaultCollapsed>
-                        <Panel.Heading >
+                        <Panel id="omapanel" collapsible defaultCollapsed>
+                        <Panel.Heading className="">
                             <Panel.Title toggle>{tehtava.Nimi}</Panel.Title>
-                            <button className="poistaButton" data-id={tehtava.TehtavaID} onClick={this.PoistajaHandler} >Poista</button>
                         </Panel.Heading>
                         <Panel.Collapse>
                             <Panel.Body>
@@ -37,11 +29,10 @@ class Tehtavalista extends Component {
 
             <div>
                 {kaikkiTehtavat}
+                <br />
             </div>
         );
     }
 }
 
-export default Tehtavalista;
-
-
+export default TehdytTehtavat;
