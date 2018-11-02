@@ -14,18 +14,7 @@ class App extends Component {
     return (      
       <Router>
         <div className="App">
-          
-<<<<<<< HEAD
-          <header className="App-header">
-          <Navigation/>
-          </header>
-          <div>
-          <Routing kayttaja = {this.state}/>
-=======
-         
-            <Login/>
-          
->>>>>>> jouni
+          <Login/>
           </div>
         
       </Router>
