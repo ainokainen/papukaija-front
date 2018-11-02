@@ -20,8 +20,9 @@ class Tehtavalista extends Component {
                     <div className="panelwidth">
                         <Panel collapsible defaultCollapsed>
                         <Panel.Heading >
-                            <Panel.Title toggle>{tehtava.Nimi}</Panel.Title>
                             <button className="poistaButton" data-id={tehtava.TehtavaID} onClick={this.PoistajaHandler} >Poista</button>
+                            <Panel.Title toggle>{tehtava.Nimi}</Panel.Title>
+                            
                         </Panel.Heading>
                         <Panel.Collapse>
                             <Panel.Body>
