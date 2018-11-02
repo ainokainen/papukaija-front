@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { Route, Switch, NavLink } from 'react-router-dom';
 import Home from "./Home";
 import Profiili from './Profiili';
-import { HaeKayttaja, LisaaTehtava, MuokkaaTehtavaa } from '../serviceclient';
+import { HaeKayttaja, LisaaTehtava, MuokkaaTehtavaa, PoistaTehtava } from '../serviceclient';
 import "../App.css"
 import { Media, Nav, NavItem } from "react-bootstrap";
-import "./Navigation.css";
+import "../styles/Navigation.css";
 import Done from './Done';
 
 class Routing extends Component {
@@ -37,6 +37,9 @@ class Routing extends Component {
         console.log("seuraavaksi terveisiä muokkaatehtavaa handlerista")
         console.log(task);
         MuokkaaTehtavaa(task, this.KayttajanHaku);
+    }
+    PoistaTehtavaHandler = (id) =>{
+        PoistaTehtava(id, this.KayttajanHaku);
     }
 
     render() {
@@ -73,7 +76,8 @@ class Routing extends Component {
                     </Nav>
                 </div>
                 <Switch>
-                    <Route exact path="/" render={props => <Home {...props} kayttajaID={this.props.user.ID} eiTehdytTehtavat={this.eiTehdyt} tehtavaHandler={this.UusiTehtavaHandler} />} />
+                    <Route exact path="/" render={props => <Home {...props} kayttajaID={this.props.user.ID} eiTehdytTehtavat={this.eiTehdyt} tehtavaHandler={this.UusiTehtavaHandler}
+                    poistaTehtava ={this.PoistaTehtavaHandler}/>} />
                     <Route path="/profiili" render={props => <Profiili {...props} profiili={this.props.user} />} />
                     <Route path="/done" render={props => <Done {...props} tehdytTehtavat={this.tehdyt} />} />
 

@@ -1,0 +1,21 @@
+.poistaButton{
+    float: right;
+    color:white;
+    background-color: #E4964D;
+    border-style: none;
+    border-radius: 10%;
+    padding: 0.25em;
+    padding-right: 0.5em;
+    padding-left:0.5em;
+}
+
+.merkitseTehdyksiButton{
+    float: left;
+    color: #D4AF37;
+    background-color: white;
+    border-style: none;
+    border-radius: 5%;
+    padding: 0.25em;
+    padding-right: 0.5em;
+    padding-left:0.5em;
+}

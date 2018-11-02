@@ -28,7 +28,7 @@ class TehtavaForm extends Component {
             }
             tanaan = yyyy+'-'+mm+'-'+dd;
             this.setState({aikaleima: tanaan})
-        };
+        };s
        luoT=(event)=>{
            event.preventDefault();
            console.log("Seuraavaksi terveisiä tformilta")

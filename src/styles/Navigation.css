@@ -36,6 +36,7 @@
     border-style: solid;
     border-color: #666A86;
     border-width: thin;
+    margin-left:20%;
 }
 .panel-default>.panel-heading {
     background-color:#EBF38B;
