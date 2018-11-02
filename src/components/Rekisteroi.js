@@ -54,7 +54,6 @@ class Rekisteroi extends Component {
                 <FormGroup controlId="sukunimi" bsSize="large">
                     <ControlLabel>Sukunimi</ControlLabel>
                     <FormControl
-                        autoFocus
                         value={this.state.Sukunimi}
                         onChange={e =>this.handleSukunimi(e.target.value)}
                     />

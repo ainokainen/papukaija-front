@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Tehtava from './Tehtava';
-import {Image, Media,Nav,NavItem,NavDropdown,MenuItem, Panel} from "react-bootstrap";
+import { Panel} from "react-bootstrap";
 
 class Tehtavalista extends Component {
 
@@ -27,16 +27,6 @@ class Tehtavalista extends Component {
         return (
 
             <div>
-                {/* <div className="panelwidth">
-                <Panel id="omapanel" collapsible defaultExpanded>
-                    <Panel.Heading className="">
-                    <Panel.Title toggle>Tekemätön tehtävä otsikko </Panel.Title>
-                    <input type="button"/>
-                    </Panel.Heading>
-                        
-                </Panel>
-                    
-                </div> */}
                 {kaikkiTehtavat}
                 <br />
             </div>

@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import '../Form.css';
-import { Form, ControlLabel } from "react-bootstrap";
+import { Button, FormGroup, FormControl, ControlLabel, Col } from "react-bootstrap";
+
 
 
 class TehtavaForm extends Component {
     constructor (props){
         super (props)
         
-        this.state= {Nimi:" ", Kuvaus:" ", Pisteet: "  ", KayttajaID:2, Kuva: null,  Aikaleima: this.DateHandler(), Kategoria: "  ", Julkinen: 0, Tehty:0}
+        this.state= {Nimi:" ", Kuvaus:" ", Pisteet: "  ", KayttajaID:this.props.kayttajaID, Kuva: null,  Aikaleima: this.DateHandler(), Kategoria: "  ", Julkinen: 0, Tehty:0}
+    }
+
+    validateForm() {
+        return this.state.Nimi.length > 0 && this.state.Kuvaus.length > 0;
     }
 
         DateHandler(){
@@ -30,39 +35,77 @@ class TehtavaForm extends Component {
            console.log(this.state);
            this.props.tehtavaHandler(this.state);
        }
-       nimiChange = (e) => {
-           this.setState({Nimi: e.target.value});
+       nimiChange (e) {
+           this.setState({Nimi: e});
        }
-       kuvausChange = (e) => {
-           this.setState({Kuvaus: e.target.value});
-       }
-
-       pisteetChange = (e) => {
-           this.setState({Pisteet: parseInt(e.target.value)});
+       kuvausChange (e) {
+           this.setState({Kuvaus: e});
        }
 
-       kuvaChange = (e) => {
-           this.setState({Kuva: e.target.value});
+       pisteetChange (e)  {
+           this.setState({Pisteet: parseInt(e)});
+       }
+
+       kuvaChange (e)  {
+           this.setState({Kuva: e});
        }
 
        kategoriaChange = (e) => {
-           this.setState({Kategoria: e.target.value});
+           this.setState({Kategoria: e});
        }
 
   
    
        render() {
            return (
-               <div>
-               <Form horizontal>
+            <div className="lisaaTehtava">
+               {/* <Form horizontal>
                    <ControlLabel>Lisää uusi tehtävä</ControlLabel><br/>
-                   Nimi: <input type="text" onChange={this.nimiChange} value ={this.state.Nimi}/> <br/>
-                   Kuvaus: <input type="text" onChange = {this.kuvausChange} value = {this.state.Kuvaus} /> <br/>
-                   Pisteet: <input type="number" onChange = {this.pisteetChange} value = {this.state.Pisteet} /> <br/>
+                   Nimi: <input type="text" onChange={this.nimiChange} value ={this.state.Nimi}/> 
+                   Kuvaus: <input type="text" onChange = {this.kuvausChange} value = {this.state.Kuvaus} /> 
+                   Pisteet: <input type="number" onChange = {this.pisteetChange} value = {this.state.Pisteet} />  */}
                    
-                   <input type="button" value = "lisää" onClick ={this.luoT} />
-               </Form>
+                <form onSubmit={this.luoT}>
+                    <FormGroup controlId="nimi" bsSize="large" class="form-horizontal">
+                        <Col md ={2}>
+                        <FormControl
+                            autoFocus
+                            placeholder="Nimi"
+                            type="text"
+                            onChange={e =>this.nimiChange(e.target.value)}
+                        />
+                        </Col>
+                        <Col md ={2}>
+                        <FormControl
+                            placeholder="Kuvaus"
+                            type="text"
+                           
+                            onChange={e =>this.kuvausChange(e.target.value)}
+                        />
+                        </Col>
+                        <Col md ={2}>
+                        <FormControl
+                            placeholder="Pisteet"
+                            type="number"
+                            onChange={e =>this.pisteetChange(e.target.value)}
+                        />
+                        </Col>
+                        
+                    </FormGroup>
+                    <Col md ={2}>
+                    <Button
+                        block
+                        bsSize="large"
+                        disabled={!this.validateForm()}
+                        type="submit"
+                        >
+                        Lisää
+                    </Button>
+                    </Col>
+                    
+               </form>
                </div>
+               
            );
        }
     }
