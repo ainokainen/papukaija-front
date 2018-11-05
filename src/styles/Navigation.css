@@ -20,6 +20,7 @@
 .navItems:hover  {
     color: #808782;
 }
+/* Tässä tosi hieno ja moniulotteinen css-viittaus! Respect */
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
     color: #808782;
     background-color:#D4AF37;
